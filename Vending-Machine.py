@@ -6,7 +6,8 @@ import pygame
 
 pygame.mixer.init()
 pygame.mixer.music.load("VendingMusic.mp3")
-pygame.mixer.music.play()
+pygame.mixer.music.set_volume(0.1)
+pygame.mixer.music.play(-1)
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
@@ -47,14 +48,12 @@ itemssnacks = {
 
 def displayitems(category_name, items):
     print(f"\n{category_name.upper()}:")
-    speak(f"{category_name.upper()}:")
     for code, details in items.items():
         snack, price = details
         print(f'{code} : {snack}, ${price:.2f}')
-        speak(f"{code}: {snack}, {price:.2f} AED.")
 
 print("SELECT ITEMS")
-speak("Please select an item from the following categories.")
+speak("Please choose which category you would like to buy from.")
 displayitems("Hot Drinks", itemshotdrinks)
 displayitems("Cold Drinks", itemscolddrinks)
 displayitems("Snacks", itemssnacks)
@@ -62,32 +61,25 @@ displayitems("Snacks", itemssnacks)
 all_items = {**itemshotdrinks, **itemscolddrinks, **itemssnacks}
 
 choice = input("Please select what you would like: ").upper().strip()
-speak(f"You selected {choice}. Processing your choice.")
 
 if choice not in all_items:
     print("This is not a valid option, please try again.")
-    speak("This is not a valid option, please try again.")
 else:
     item, price = all_items[choice]
     print(f"You selected: {item} for {price:.2f} AED.")
-    speak(f"You selected {item} for {price:.2f} AED.")
     
     if choice in itemshotdrinks:
         ask = input("Would you like a snack to go with that? (yes/no): ").strip().lower()
         if ask == "yes":
-            speak("Please select a snack.")
             add_snack = input("What snack would you like? (e.g., C1, C2): ").upper().strip()
             if add_snack not in itemssnacks:
                 print("This is not a valid snack option. Proceeding with the original item.")
-                speak("This is not a valid snack option. Proceeding with the original item.")
             else:
                 snack, snack_price = itemssnacks[add_snack]
                 price += snack_price
                 print(f"Added {snack} for {snack_price:.2f} AED.")
-                speak(f"Added {snack} for {snack_price:.2f} AED.")
 
     money = float(input(f"Total cost: {price:.2f} AED. Please insert money: "))
-    speak(f"The total cost is {price:.2f} AED. Please insert money.")
     if money >= price:
         change = money - price
         print(f"Thank you! Your change is {change:.2f} AED.")
@@ -95,7 +87,5 @@ else:
         sales_data(item, price, 1)
     else:
         print(f"Insufficient funds. {item} costs {price:.2f} AED.")
-        speak(f"Insufficient funds. {item} costs {price:.2f} AED.")
 
 conn.close()
-
