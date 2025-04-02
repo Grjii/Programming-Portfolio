@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB Color Guessing Game</title>
+    <link rel="stylesheet" href="excercise6bonus.css">
+</head>
+<body>
+    <!-- Main game container -->
+    <div class="game">
+        <!-- Game title -->
+        <h1>Color Guesser</h1>
+        <!-- Lives counter -->
+        <p>Lives: <span id="lives">3</span></p>
+        <!-- Display target color -->
+        <div id="targetColor"></div>
+        <!-- Color options for the player -->
+        <div id="options"></div>
+        <!-- Message for feedback (Correct or Try Again) -->
+        <p id="message"></p>
+        <!-- Game Over section (hidden by default) -->
+        <div id="gameOver" style="display:none">
+            <h2>Game Over!</h2>
+            <!-- Show final score -->
+            <p>Score: <span id="finalScore">0</span></p>
+            <!-- Button to restart the game -->
+            <button onclick="resetGame()">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Link to external JS file for game logic -->
+    <script src="excercise6bonus.js"></script>
+</body>
+</html>

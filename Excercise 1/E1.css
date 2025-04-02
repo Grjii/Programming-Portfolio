@@ -1,0 +1,38 @@
+/* Styles the main heading (h1) */
+h1 {
+    color: rgb(0, 255, 76); /* Sets the text color to a bright green */
+    text-align: center; /* Centers the heading */
+}
+
+/* Aligns h2 headings to the left (default behavior, but keeping it explicit) */
+h2 {
+    text-align: left;
+}
+
+/* General body styling */
+body {
+    font-family: Arial; /* Uses a clean and simple font */
+    margin: 0; /* Removes default browser margins */
+    padding: 20px; /* Adds space around the content */
+}
+
+/* Styles for code blocks */
+code {
+    text-align: center; /* Centers the text inside code tags */
+    font-size: 16px; /* Sets a readable font size */
+}
+
+/* Adds spacing around div elements */
+div {
+    margin: 20px; /* Creates space around divs so they don't look crammed */
+}
+
+/* Styles buttons */
+button {
+    padding: 16px; /* Makes buttons bigger and easier to click */
+}
+
+/* Styles images */
+img {
+    border: 2px solid black; /* Adds a black border around images */
+}

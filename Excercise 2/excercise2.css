@@ -1,0 +1,50 @@
+body {
+ margin: 25px;
+ padding: 25px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.navbar {
+    background-color: grey; /* Sets the navbar color */
+    overflow: hidden; /* Keeps content inside */
+}
+
+.navbar a {
+    float: left; /* Aligns links in a row */
+    color: white;
+    padding: 17px;
+    font-size: 17px;
+    text-decoration: none; /* Removes underline */
+}
+
+.navbar a:hover {
+    background-color: rgb(88, 88, 88); /* Darkens on hover */
+    color: rgb(19, 19, 19);
+}
+
+
+main {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+ul {
+    display: inline-block;
+    text-align: left;  
+    padding-left: 0;   
+    margin: 0;         
+}
+
+li {
+    padding-left: 20px; 
+    margin-bottom: 20px;
+}

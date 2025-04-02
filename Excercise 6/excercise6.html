@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="excercise6.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petrol Pump Calculator</title>
+</head>
+<body>
+    <header>Petrol Calculator</header>
+    <br>
+        <form>
+            <!-- Petrol Price Input -->
+            <div class="input">
+                <!-- Label for Petrol Price input field -->
+                <label for="PPrice">Petrol Price: </label>
+                <!-- Input field for the price of petrol, with a default value of 1.72 -->
+                <input type="number" id="PPrice"  value="1.72" name="PPrice" placeholder="Input Price">
+            </div>
+            <br>
+            <!-- Litres Input -->
+            <div class="input">
+                <!-- Label for Litres input field -->
+                <label for="Litres">Litres: </label>
+                <!-- Input field for the number of litres, which will be entered by the user -->
+                <input type="number" id="Litres" name="Litres" placeholder="Input Litre(s)">       
+            </div>
+        </form>
+        <br>
+        <button type="button" id="Calculate">Calculate Total</button>
+
+        <div id="result">
+            Total Cost: <span id="totalamnt">0.00 AED</span>
+        </div>
+        <script src="excercise6.js"></script>
+</body>
+</html>
